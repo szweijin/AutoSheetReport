@@ -36,7 +36,7 @@ AutoSheetReport/
 - 報表自動寄送郵件
 
 # GitHub 專案下載與使用指南
-1. 下載專案: 用 Git 指令（推薦）
+### 1. 下載專案: 用 Git 指令（推薦）
   ```
   git clone https://github.com/你的帳號/你的專案名稱.git
   cd 你的專案名稱
@@ -44,36 +44,32 @@ AutoSheetReport/
   或者直接點 GitHub 頁面右上「Code」按鈕，選「Download ZIP」，下載後解壓縮
 
 
-2. 安裝 Python 環境
+### 2. 安裝 Python 環境
   確保電腦已安裝 Python 3（建議 3.7+）
   在終端機或命令提示字元輸入：
   ```python --version```
   如果沒有安裝，可以到 python.org 下載安裝。
 
-3. 建立虛擬環境（建議）
-  避免與其他 Python 專案套件衝突。
-  ```python -m venv venv```
-  
-  啟動虛擬環境：
-  Windows:
-  `venv\Scripts\activate`
-  
-  macOS/Linux:
-  `source venv/bin/activate`
+### 3. 建立虛擬環境（建議）
+*   避免與其他 Python 專案套件衝突 ```python -m venv venv```
 
-4. 安裝相依套件
+#### 啟動虛擬環境： 
+  * Windows: `venv\Scripts\activate`
+  * macOS/Linux: `source venv/bin/activate`
+
+### 4. 安裝相依套件
   專案裡會有 requirements.txt ，執行：
   `pip install -r requirements.txt`
 
-6. 準備 Google API 憑證
-  申請並下載 Google 服務帳戶憑證 credentials.json，放在專案資料夾根目錄（或 README 說明路徑）
-  修改 sheets_config.json，填入你的 Google Sheets 試算表ID及部門名稱
-  修改 config.json，設定你的 Google Drive 資料夾 ID
+### 5. 準備 Google API 憑證
+* 申請並下載 Google 服務帳戶憑證 credentials.json，放在專案資料夾根目錄（或 README 說明路徑）
+* 修改 sheets_config.json，填入你的 Google Sheets 試算表ID及部門名稱
+* 修改 config.json，設定你的 Google Drive 資料夾 ID
 
-6. 執行專案
+### 6. 執行專案
 `python app_gui.py`
 
-7. 打包後使用（如果有）
+### 7. 打包後使用（如果有）
 如果你有用 PyInstaller 打包成執行檔，直接執行打包出來的檔案即可。
 
 # 其他說明
