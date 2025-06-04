@@ -9,7 +9,7 @@ AutoSheetReport/
 ├── upload_to_drive.py         # Google Drive 上傳模組
 ├── sheets_config.json         # Google Sheets 設定
 ├── config.json                # 其他設定檔（可排除敏感資訊）
-├── credentials.json           # **這個通常不要上傳，要用 .gitignore 忽略**
+├── credentials.json           # **這個不上傳，要用 .gitignore 忽略**
 ├── README.md                  # 專案說明文件
 ├── requirements.txt           # 依賴套件清單
 └── .gitignore                 # 忽略清單（例如 credentials.json、.venv/）
