@@ -1,14 +1,14 @@
 [
   {
     "department": "業務部",
-    "sheet_id": "1-i3yW5wf9iKBajd9NI1r1SovQQl_mg2gNIYJrnLIv9U"
+    "sheet_id": "google sheet id (記得要共用給服務帳戶)"
   },
   {
     "department": "客服部",
-    "sheet_id": "1RH0db4CVY7q3JSyg2Kofq-u1q0kRwQC4WDw7u-7HA4U"
+    "sheet_id": "google sheet id"
   },
   {
     "department": "人資部",
-    "sheet_id": "1Am6GtpyG4GvpjFvzAe517vfbUYn_JT-8WlbSQD0_ymg"
+    "sheet_id": "google sheet id"
   }
 ]
