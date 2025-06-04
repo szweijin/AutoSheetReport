@@ -1,6 +1,16 @@
 # AutoSheetReport
 自動化 Google Sheets 報表產生與上傳系統
 
+## 📌 專案簡介
+AutoSheetReport 是一款自動化報表生成工具，能夠從多個 Google Sheets 試算表中擷取資料，合併並產出 Excel 報表，並自動上傳至指定的 Google Drive 資料夾，適合部門間的數據彙整與分享。
+
+## ✨ 功能特色
+- 從多個 Google Sheets 自動擷取資料
+- 合併並生成 Excel 報表，支援版本編號
+- 自動上傳報表至 Google Drive 指定資料夾
+- 支援 GUI 操作，簡化使用流程
+
+
 ## 專案結構建議
 ```
 AutoSheetReport/
@@ -14,12 +24,6 @@ AutoSheetReport/
 ├── requirements.txt           # 依賴套件清單
 └── .gitignore                 # 忽略清單（例如 credentials.json、.venv/）
 ```
-
-## 功能
-- 從多個 Google Sheets 抓取資料，合併後產生 Excel 報表
-- 依版本號自動命名報表檔案
-- 自動上傳報表至指定 Google Drive 資料夾
-- 支援打包成單檔執行檔 (EXE / macOS app)
 
 ## 使用說明
 1. 準備 Google 服務帳戶憑證 `credentials.json` （下方有寫準備步驟）
@@ -36,10 +40,10 @@ AutoSheetReport/
 - 報表自動寄送郵件
 
 # GitHub 專案下載與使用指南
-### 1. 下載專案: 用 Git 指令（推薦）
+### 1. 下載專案: 用 Git 指令
   ```
-  git clone https://github.com/你的帳號/你的專案名稱.git
-  cd 你的專案名稱
+  git clone https://github.com/szweijin/AutoSheetReport.git
+  cd AutoSheetReport
   ```
   或者直接點 GitHub 頁面右上「Code」按鈕，選「Download ZIP」，下載後解壓縮
 
@@ -72,13 +76,13 @@ AutoSheetReport/
 ### 7. 打包後使用（如果有）
 如果你有用 PyInstaller 打包成執行檔，直接執行打包出來的檔案即可。
 
-# 其他說明
+## 其他說明
 1. credentials.json 請妥善保管，不要公開放在 GitHub。
 2. 如果程式找不到設定檔，請確認檔案路徑和名稱是否正確。
 3. 報表會產生在指定的輸出資料夾（預設 output 或你自己設定的路徑）。
 
 
-# credentials.json準備與啟用 Google Sheets API
+## credentials.json準備與啟用 Google Sheets API
 ### 1.：建立 Google Sheet 串接（OAuth 服務帳戶）
 #### 開通 Google Sheets API（只做一次）
 * 到 Google Cloud Console 建立新專案（或選一個現有專案）
