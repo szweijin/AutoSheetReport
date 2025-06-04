@@ -22,7 +22,7 @@ AutoSheetReport/
 - 支援打包成單檔執行檔 (EXE / macOS app)
 
 ## 使用說明
-1. 準備 Google 服務帳戶憑證 `credentials.json`
+1. 準備 Google 服務帳戶憑證 `credentials.json` （下方有寫準備步驟）
 2. 修改 `sheets_config.json` 設定要抓取的試算表ID與部門名稱
 3. 修改 `config.json` 設定 Google Drive 資料夾 ID
 4. 安裝相依套件：`pip install -r requirements.txt`
@@ -76,4 +76,24 @@ AutoSheetReport/
 1. credentials.json 請妥善保管，不要公開放在 GitHub。
 2. 如果程式找不到設定檔，請確認檔案路徑和名稱是否正確。
 3. 報表會產生在指定的輸出資料夾（預設 output 或你自己設定的路徑）。
+
+
+# credentials.json準備與啟用 Google Sheets API
+### 1.：建立 Google Sheet 串接（OAuth 服務帳戶）
+#### 開通 Google Sheets API（只做一次）
+* 到 Google Cloud Console 建立新專案（或選一個現有專案）
+* 在左側選單點「API 和服務」→「啟用 API 與服務」
+* 搜尋 `Google Sheets API`、`Google Drive API`，點進去後按「啟用」
+
+### 2.建立服務帳戶憑證（credentials.json）
+* 左側選單點「API 和服務」→「憑證」
+* 點選「建立憑證」→ 選「服務帳戶」
+* 取名後一路下一步（不用選角色）
+* 建立完成後，點該服務帳戶 → 頁面下方橫排選單「金鑰」→ 新增鍵 → 選擇 JSON 就會自動下載
+`這個檔案會是你程式用來登入 Google API 的 json檔案，請改名為 credentials.json，並放到資料夾根目錄`
+
+### 3. 將你的 Google Sheet 分享給服務帳戶 email
+你在 credentials.json 裡會看到一個 email 類似：
+`xxxx@your-project.iam.gserviceaccount.com`
+請打開你要讀取的 Google Sheet，右上角「共用」→ 加入這個信箱 → 權限「編輯者」
 
